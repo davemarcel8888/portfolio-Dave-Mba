@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - MBA Amougou Dave Marcel</title>
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9fb;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0.1));
+            transform: skewX(-45deg);
+            animation: move 5s linear infinite;
+        }
+        @keyframes move {
+            from {
+                left: -50%;
+            }
+            to {
+                left: 100%;
+            }
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        section h2 {
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+        .skills, .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .skills div, .project {
+            background: #f0f4f8;
+            padding: 15px;
+            flex: 1 1 calc(33% - 20px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .skills div:hover, .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .project img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .contact {
+            text-align: center;
+        }
+        .contact a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <canvas id="networkCanvas"></canvas>
+        <h1>MBA Amougou Dave Marcel</h1>
+        <p>Cybersécurité | Réseaux | Sécurité Informatique</p>
+    </header>
+    <nav>
+        <a href="#about">À Propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Expériences</a>
+        <a href="#languages">Langues</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>À Propos</h2>
+        <p>Passionné par le réseau et la sécurité informatique, je suis actuellement étudiant en Master spécialisé en management de la cybersécurité à l'Institut Léonard de Vinci - Paris La Défense. Je possède une solide expertise technique en gestion des infrastructures, cybersécurité et virtualisation, renforcée par plusieurs expériences professionnelles significatives.</p>
+    </section>
+    <section id="skills">
+        <h2>Compétences</h2>
+        <div class="skills">
+            <div>
+                <h3>Réseaux</h3>
+                <p>VLAN, VPN, routage, pare-feux, Active Directory, gestion des infrastructures réseau.</p>
+            </div>
+            <div>
+                <h3>Administration Systèmes</h3>
+                <p>Linux, Windows Server, virtualisation (VMware ESXi, Hyper-V).</p>
+            </div>
+            <div>
+                <h3>Programmation & Scripting</h3>
+                <p>Python, Bash, Shell scripting.</p>
+            </div>
+            <div>
+                <h3>Cybersécurité</h3>
+                <p>Analyse des risques, mise en place de PSSI, gestion des vulnérabilités, NAC.</p>
+            </div>
+            <div>
+                <h3>Cloud</h3>
+                <p>infrastructures virtualisées.</p>
+            </div>
+            <div>
+                <h3>Stockage & Virtualisation</h3>
+                <p>Configuration de NAS, gestion des environnements virtualisés.</p>
+            </div>
+            <div>
+                <h3>Gestion de Projet</h3>
+                <p>Planification, coordination et suivi des tâches pour atteindre les objectifs fixés.</p>
+            </div>
+            <div>
+                <h3>Rédaction & Analyse</h3>
+                <p>Élaboration de rapports, analyse des données et documentation technique.</p>
+            </div>
+        </div>
+    </section>
+   <section id="projects">
+        <h2>Expériences</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="https://th.bing.com/th/id/OIP.9WAHfeZmKa3S9z_2m0nDBwHaE8?w=234&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Illustration Application d’Analyse de Risques">
+                <h3>ANTIC - Yaoundé, Cameroun</h3>
+                <p><strong>Poste :</strong> Stagiaire sécurité du système d'information</p>
+<p><strong>Période :</strong> Février 2024 - Juin 2024</p>
+                <ul>
+                    <li>Conception d’une application d’analyse de risques de sécurité du système d’information pour la cellule interne d’audit.</li>
+                    <li>Mise à jour des normes de sécurité pour garantir la conformité internationale.</li>
+                    <li>Développement d’un outil de simulation de système d'information .</li>
+                </ul>
+                   <li><strong>Impact :</strong>
+                        <ul>
+                            <li>Optimisation du temps passé sur les audits.</li>
+                            <li>Restructuration efficace du système d'information grâce à la mise aux normes.</li>
+                        </ul>
+                    </li>
+            </div>
+            <div class="project" class="col-md-4">
+                <img src="https://th.bing.com/th/id/OIP.lclubN2_4PmgQF7D0Zf-7QHaD4?w=314&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Illustration Réseaux Sécurisés">
+                <h3>ITG Store - Douala, Cameroun</h3>
+                <p><strong>Poste :</strong> Stagiaire- Ingénieur réseau et sécurité</p>
+<p><strong>Période :</strong> Septembre 2022-janvier 2023</p>
+                <ul>
+                    <li>Implémentation d’un contrôleur d’accès FORTINAC.</li>
+                    <li>Déploiement et configuration d’une infrastructure virtuelle sous VMware ESXi pour
+ optimiser les ressources matérielles.</li>
+                    <li>Mise en place et configuration d’un NAC  pour le stockage et le partage des données.</li>
+                    <li>Configuration et gestion des comptes utilisateurs via Active Directory.</li>
+                    <li><strong>Impact :</strong>
+                        <ul>
+                            
+                            <li>Sécurité renforcée sur le réseau grâce au NAC.</li>
+                            <li>Meilleure gestion des accès pour les utilisateurs.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="project">
+                <img src="https://th.bing.com/th/id/OIP.ZkzZrn8kn853Z3osk_z9GAHaDt?w=296&h=174&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Illustration Automatisation avec Python">
+                <h3>Global Wine - Douala, Cameroun</h3>
+                <p><strong>Poste :</strong> Stagiaire- Technicien réseau</p>
+<p><strong>Période :</strong> Janvier 2022 - Mai 2022</p>
+                <ul>
+                    <li>Mise en œuvre d’un accès distant sécurisé pour les serveurs internes, garantissant la
+ continuité d’activité.</li>
+                    <li>Mise en place d’un VPN IPSec redondant pour connecter 5 sites répartis à Douala,
+ Yaoundé, et Bafoussam..</li>
+                    <li><strong>Impact :</strong>
+                        <ul>
+                            <li>Assurance de la continuité des activités malgré les problèmes de connexion dans la sous-région.</li>
+                            <li>Facilitation du télétravail et de la maintenance des postes à distance.</li>
+                        </ul>
+                </ul>
+            </div>
+            <div class="project">
+                <img src="https://th.bing.com/th/id/OIP.zQz0MpJBHg6Z9kb5_YVe5QHaEK?w=290&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Illustration Configuration NAS">
+                <h3>ITG Store - Douala, Cameroun</h3>
+                <p><strong>Poste :</strong> Stagiaire- Technicien réseau</p>
+<p><strong>Période :</strong>  Mai 2021 -Juin 2021</p>
+                <ul>
+                    <li>Conception et mise en place d’un tunnel VPN IPSec entre deux sites distants, utilisant
+ Pfsense et FortiGate..</li>
+                    <li>Simulation de l’environnement réseau à l’aide de technologies de virtualisation
+ (VMware ESXi).</li>
+                    <li><strong>Impact :</strong>
+                        <ul>
+                            <li>Test technique réalisé sans résultats définitifs.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="project">
+                <img src="https://media.licdn.com/dms/image/v2/D4E22AQFRGL0xgdl_ig/feedshare-shrink_1280/feedshare-shrink_1280/0/1704825974617?e=1737590400&v=beta&t=1RiOQ-BRmK4SUPb2KiyxTWr4n6VY0JhwGNyFJ6bs1TQ" alt="Illustration Conférence ETSSI">
+                <h3>Organisation de la Conférence ETSSI</h3>
+                <ul>
+                    <li><strong>Date :</strong> Janvier 2024</li>
+                    <li><strong>Description :</strong> Conférence sur l’Évolution Technologique et Stratégique des Systèmes d’Information.</li>
+                    <li><strong>Impact :</strong>
+                        <ul>
+                            <li>Favorisation des échanges entre experts et professionnels IT.</li>
+                            <li>Sensibilisation aux enjeux stratégiques des systèmes d’information modernes.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="skills">
+            <div>
+                <h3>CCNA 1 (Cisco Certified Network Associate)</h3>
+                <p>Certification attestant de compétences en réseaux et infrastructure Cisco.</p>
+            </div>
+            <div>
+                <h3>NSE 1, 2, et 3 (Network Security Expert)</h3>
+                <p>Certifications Fortinet pour la maîtrise des concepts fondamentaux en cybersécurité.</p>
+            </div>
+            <div>
+                <h3>TOEIC (Score : 915)</h3>
+                <p>Test d’aptitude en anglais professionnel, validant un excellent niveau de maîtrise.</p>
+            </div>
+            <div>
+                <h3>ISC2 Cybersecurity Certification</h3>
+                <p>Certification couvrant les fondamentaux de la cybersécurité.</p>
+            </div>
+            <div>
+                <h3>ANSSI SecNumacadémie</h3>
+                <p>Programme de formation en cybersécurité proposé par l’ANSSI.</p>
+            </div>
+            <div>
+                <h3>SKILLFRONT ISO/IEC 27001:2022</h3>
+                <p>Certification en gestion de la sécurité de l’information selon la norme ISO/IEC 27001.</p>
+            </div>
+        </div>
+    </section>
+    <section id="languages">
+        <h2>Langues</h2>
+        <div class="skills">
+            <div>
+                <h3>Français</h3>
+                <p>Langue maternelle.</p>
+            </div>
+            <div>
+                <h3>Anglais</h3>
+                <p>Niveau avancé (TOEIC : 915).</p>
+            </div>
+        </div>
+    </section>
+   <section id="hobbies" style="background: linear-gradient(90deg, #f8f9fa, #e9ecef); border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+    <h2 style="text-align: center; color: #444;">Hobbies</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px; padding: 20px;">
+        <div style="flex: 1 1 calc(33% - 20px); background: #fff; padding: 15px; text-align: center; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <h3>Sports</h3>
+            <p>Basket, football, tennis, golf, et autres activités sportives.</p>
+        </div>
+        <div style="flex: 1 1 calc(33% - 20px); background: #fff; padding: 15px; text-align: center; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <h3>Musique et Jeux Vidéo</h3>
+            <p>Apprécier les mélodies et plonger dans des aventures interactives.</p>
+        </div>
+        <div style="flex: 1 1 calc(33% - 20px); background: #fff; padding: 15px; text-align: center; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <h3>Films et Cinéma</h3>
+            <p>Découvrir et apprécier des œuvres cinématographiques inspirantes.</p>
+        </div>
+        <div style="flex: 1 1 calc(33% - 20px); background: #fff; padding: 15px; text-align: center; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <h3>Œuvres Caritatives</h3>
+            <p>Participation à des activités de soutien communautaire pour faire une différence.</p>
+        </div>
+    </div>
+</section>
+
+    <script>
+        const canvas = document.getElementById('networkCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = 200;
+        }
+
+        function drawNetwork() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < 100; i++) {
+                const x = Math.random() * canvas.width;
+                const y = Math.random() * canvas.height;
+                const size = Math.random() * 2;
+                ctx.beginPath();
+                ctx.arc(x, y, size, 0, Math.PI * 2);
+                ctx.fillStyle = "#fff";
+                ctx.fill();
+
+                if (Math.random() > 0.5) {
+                    const x2 = Math.random() * canvas.width;
+                    const y2 = Math.random() * canvas.height;
+                    ctx.beginPath();
+                    ctx.moveTo(x, y);
+                    ctx.lineTo(x2, y2);
+                    ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
+                    ctx.stroke();
+                }
+            }
+        }
+
+        let lastFrameTime = 0;
+        function animate(currentTime) {
+            if (!lastFrameTime || currentTime - lastFrameTime > 500) { // Slow down animation
+                drawNetwork();
+                lastFrameTime = currentTime;
+            }
+            requestAnimationFrame(animate);
+        }
+
+        resizeCanvas();
+        animate();
+        window.addEventListener('resize', resizeCanvas);
+    </script>
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact">
+            <p>Email : <a href="mailto:dave.mba_amougou@edu.devinci.fr">dave.mba_amougou@edu.devinci.fr</a></p>
+            <p>Téléphone : +33 7 59 66 47 42</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 MBA Amougou Dave Marcel | Tous droits réservés</p>
+    </footer>
+</body>
+</html>
